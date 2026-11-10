@@ -1,0 +1,172 @@
+/* ===================================================
+   ĐỊNH DẠNG CSS TRANG CHỦ (Home.css)
+   Thực hiện Bước 3 theo yêu cầu đề bài
+   =================================================== */
+
+.home-page {
+  padding-bottom: 40px;
+}
+
+/* 1. Hero Banner */
+.hero-section {
+  padding: 36px 0 20px;
+}
+
+.hero-banner {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.hero-banner:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.hero-content {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-badge {
+  align-self: flex-start;
+  margin-bottom: 14px;
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.hero-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  line-height: 1.35;
+  margin-bottom: 14px;
+  color: var(--secondary);
+}
+
+.hero-title a {
+  transition: var(--transition);
+}
+
+.hero-title a:hover {
+  color: var(--primary);
+}
+
+.hero-excerpt {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 22px;
+}
+
+.hero-author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.hero-image-wrapper {
+  overflow: hidden;
+  background-color: #e2e8f0;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.hero-banner:hover .hero-img {
+  transform: scale(1.03);
+}
+
+/* 2. Main Content Layout */
+.main-content-section {
+  padding: 20px 0 30px;
+}
+
+.content-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 12px;
+}
+
+.section-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--secondary);
+}
+
+.section-subtitle {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    padding: 30px 24px;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-img {
+    height: 280px;
+  }
+
+  .content-layout {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 640px) {
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-meta {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
