@@ -137,7 +137,7 @@ export default function ManagePosts() {
 
       {/* Form Thêm / Sửa bài viết */}
       <div className="form-card">
-        <h3>{isEditing ? `Chỉnh sửa bài viết #${editId} (PUT)` : 'Thêm bài viết mới (POST)'}</h3>
+        <h3>{isEditing ? `Chỉnh sửa bài viết #${editId}` : 'Thêm bài viết mới'}</h3>
         <form onSubmit={handleSubmit} className="crud-form">
           <div className="form-row">
             <div className="form-group">
@@ -182,16 +182,16 @@ export default function ManagePosts() {
               </button>
             )}
             <button type="submit" className="btn btn-primary">
-              {isEditing ? 'Lưu thay đổi (PUT)' : 'Thêm bài viết (POST)'}
+              {isEditing ? 'Lưu thay đổi' : 'Thêm bài viết'}
             </button>
           </div>
         </form>
       </div>
 
-      {/* Bảng danh sách bài viết (GET) */}
+      {/* Bảng danh sách bài viết */}
       <div className="table-card">
         <div className="table-card-header">
-          <h3>Danh sách bài viết trong Database ({posts.length}) - [GET]</h3>
+          <h3>Danh sách bài viết trong Database ({posts.length})</h3>
           <button className="btn btn-outline btn-sm" onClick={fetchPosts}>
             Làm mới dữ liệu
           </button>
