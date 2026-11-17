@@ -1,11 +1,22 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { getPostById } from '../services/api';
 import './PostDetail.css';
 
 export default function PostDetail({ posts = [] }) {
   const { id } = useParams();
   const navigate = useNavigate();
-  const post = posts.find(p => p.id === parseInt(id));
+  const [post, setPost] = useState(() => posts.find(p => p.id === parseInt(id)));
+
+  useEffect(() => {
+    // Luôn ưu tiên đồng bộ dữ liệu mới nhất từ Backend API
+    getPostById(id)
+      .then(data => setPost(data))
+      .catch(() => {
+        const found = posts.find(p => p.id === parseInt(id));
+        if (found) setPost(found);
+      });
+  }, [id, posts]);
 
   const [commentInput, setCommentInput] = useState('');
   const [commentAuthor, setCommentAuthor] = useState('');

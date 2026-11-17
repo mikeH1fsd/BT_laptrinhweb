@@ -24,6 +24,7 @@ export default function Footer() {
             <li><Link to="/">Trang chủ</Link></li>
             <li><Link to="/about-us">Giới thiệu bài tập</Link></li>
             <li><Link to="/posts">Tất cả bài viết</Link></li>
+            <li><Link to="/manage">Quản lý bài viết</Link></li>
             <li><Link to="/contact">Gửi tin nhắn</Link></li>
           </ul>
         </div>

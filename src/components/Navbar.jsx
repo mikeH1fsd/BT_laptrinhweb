@@ -64,6 +64,15 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <NavLink 
+                to="/manage" 
+                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+                onClick={closeMenu}
+              >
+                Quản lý bài viết
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink 
                 to="/contact" 
                 className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
                 onClick={closeMenu}
