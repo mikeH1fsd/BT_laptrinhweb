@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# .NET
+bin/
+obj/
+server/bin/
+server/obj/
+*.db-shm
+*.db-wal

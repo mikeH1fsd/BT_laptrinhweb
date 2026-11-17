@@ -1,18 +1,36 @@
-# Bài tập thực hành số 1 - Lập trình Web
+# Bài tập thực hành Lập trình Web
 
 - **Họ và tên:** Lê Hoàng Ngọc
 - **MSSV:** N23DCAT048
-- **Đề tài:** Website Quản lý Blog cá nhân
+- **Đề tài:** Website Quản lý Blog
 
-## Hướng dẫn chạy dự án
+---
 
-1. Cài đặt các thư viện:
+## 1. Hướng dẫn chạy Back-end (ASP.NET Core Web API)
+
+Yêu cầu máy đã cài .NET 8 SDK.
+
 ```bash
-npm install
+cd server
+dotnet run
 ```
 
-2. Chạy ứng dụng:
+- API server chạy tại: `http://localhost:5000`
+- Xem tài liệu Swagger: `http://localhost:5000/swagger`
+
+### Danh sách các Endpoint (CRUD):
+- `GET /api/posts`: Lấy danh sách tất cả bài viết
+- `GET /api/posts/{id}`: Xem chi tiết bài viết
+- `POST /api/posts`: Thêm bài viết mới
+- `PUT /api/posts/{id}`: Cập nhật bài viết
+- `DELETE /api/posts/{id}`: Xóa bài viết
+
+---
+
+## 2. Hướng dẫn chạy Front-end (ReactJS)
+
 ```bash
+npm install
 npm run dev
 ```
 
